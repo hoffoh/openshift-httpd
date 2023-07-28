@@ -220,7 +220,7 @@
       "displayName": "Namespace",
       "description": "The OpenShift Namespace where the ImageStream resides.",
       "required": true,
-      "value": "openshift"
+      "value": "index"
     },
     {
       "name": "HTTPD_VERSION",
