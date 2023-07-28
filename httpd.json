@@ -251,7 +251,8 @@
     {
       "name": "CONTEXT_DIR",
       "displayName": "Context Directory",
-      "description": "Set this to the relative path to your project if it is not in the root of your repository."
+      "description": "Set this to the relative path to your project if it is not in the root of your repository.",
+      "required" : true,
       "value": "index"
     },
     {
