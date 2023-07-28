@@ -220,7 +220,7 @@
       "displayName": "Namespace",
       "description": "The OpenShift Namespace where the ImageStream resides.",
       "required": true,
-      "value": "index"
+      "value": "openshift"
     },
     {
       "name": "HTTPD_VERSION",
@@ -252,6 +252,7 @@
       "name": "CONTEXT_DIR",
       "displayName": "Context Directory",
       "description": "Set this to the relative path to your project if it is not in the root of your repository."
+      "value": "index"
     },
     {
       "name": "APPLICATION_DOMAIN",
