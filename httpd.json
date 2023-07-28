@@ -2,7 +2,7 @@
   "kind": "Template",
   "apiVersion": "template.openshift.io/v1",
   "metadata": {
-    "name": "httpd-hoffoh",
+    "name": "httpd-example",
     "annotations": {
       "openshift.io/display-name": "Apache HTTP Server",
       "description": "An example Apache HTTP Server (httpd) application that serves static content. For more information about using this template, including OpenShift considerations, see https://github.com/sclorg/httpd-ex/blob/master/README.md.",
@@ -17,8 +17,8 @@
   },
   "message": "The following service(s) have been created in your project: ${NAME}.\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/sclorg/httpd-ex/blob/master/README.md.",
   "labels": {
-      "template": "httpd-hoffoh",
-      "app": "httpd-hoffoh"
+      "template": "httpd-example",
+      "app": "httpd-example"
   },
   "objects": [
     {
@@ -144,7 +144,7 @@
             "imageChangeParams": {
               "automatic": true,
               "containerNames": [
-                "httpd-hoffoh"
+                "httpd-example"
               ],
               "from": {
                 "kind": "ImageStreamTag",
@@ -170,7 +170,7 @@
           "spec": {
             "containers": [
               {
-                "name": "httpd-hoffoh",
+                "name": "httpd-example",
                 "image": " ",
                 "ports": [
                   {
@@ -213,14 +213,14 @@
       "displayName": "Name",
       "description": "The name assigned to all of the frontend objects defined in this template.",
       "required": true,
-      "value": "httpd-hoffoh"
+      "value": "httpd-example"
     },
     {
       "name": "NAMESPACE",
       "displayName": "Namespace",
       "description": "The OpenShift Namespace where the ImageStream resides.",
       "required": true,
-      "value": "index"
+      "value": "openshift"
     },
     {
       "name": "HTTPD_VERSION",
