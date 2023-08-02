@@ -174,7 +174,7 @@
                 "image": " ",
                 "volumes": [
                   {
-                    "name": "hoffoh-vol",
+                    "name": "hoffoh-pvcclaim",
                     "persistentVolumeClaim": {
                       "claimName": "hoffoh-pvcclaim"
                     }
@@ -182,7 +182,7 @@
                 ],
                 "volumeMounts": [
                   {
-                    "name":"hoffoh-vol",
+                    "name":"hoffoh-pvcclaim",
                     "mountPath": "/opt/app-root/src",
                     "readOnly": false
                   }
