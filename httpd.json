@@ -172,6 +172,13 @@
               {
                 "name": "httpd-example",
                 "image": " ",
+                "volumeMounts": [
+                  {
+                    "name":"hoffoh-pvc",
+                    "mountPath": "/opt/app-root/src",
+                    "readOnly": false
+                  }
+                ]
                 "ports": [
                   {
                     "containerPort": 8080
@@ -200,6 +207,14 @@
                 },
                 "env": [
                 ]
+              }
+            ]
+            "volumes": [
+              {
+                "name": "hoffoh-vol",
+                "persistentVolumeClaim": {
+                  "claimName": "hoffoh-pvcclaim"
+                }
               }
             ]
           }
