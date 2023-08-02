@@ -179,7 +179,7 @@
                       "claimName": "hoffoh-pvcclaim"
                     }
                   }
-                ],                
+                ],
                 "volumeMounts": [
                   {
                     "name":"hoffoh-vol",
