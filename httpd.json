@@ -168,18 +168,18 @@
             }
           },
           "spec": {
+            "volumes": [
+              {
+                "name": "hoffoh-pvcclaim",
+                "persistentVolumeClaim": {
+                  "claimName": "hoffoh-pvcclaim"
+                }
+              }
+            ],            
             "containers": [
               {
                 "name": "httpd-example",
                 "image": " ",
-                "volumes": [
-                  {
-                    "name": "hoffoh-pvcclaim",
-                    "persistentVolumeClaim": {
-                      "claimName": "hoffoh-pvcclaim"
-                    }
-                  }
-                ],
                 "volumeMounts": [
                   {
                     "name": "hoffoh-pvcclaim",
