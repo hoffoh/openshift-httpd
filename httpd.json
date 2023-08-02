@@ -183,7 +183,7 @@
                 "volumeMounts": [
                   {
                     "name": "hoffoh-pvcclaim",
-                    "mountPath": "/opt/app-root/src",
+                    "mountPath": "/home",
                     "readOnly": false
                   }
                 ],
