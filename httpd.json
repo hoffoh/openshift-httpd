@@ -174,7 +174,7 @@
                 "image": " ",
                 "volumeMounts": [
                   {
-                    "name":"hoffoh-pvc",
+                    "name":"hoffoh-vol",
                     "mountPath": "/opt/app-root/src",
                     "readOnly": false
                   }
