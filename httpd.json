@@ -188,10 +188,10 @@
           "spec": {
             "volumes": [
               {
-                "name": "http-vol",
+                "name": "${VOLUME_NAME}",
                 "persistentVolumeClaim": {
                   "claimName": "${PVC_NAME}"
-                }
+                }      "value": "httpd_vol"
               }
             ],            
             "containers": [
@@ -200,7 +200,7 @@
                 "image": " ",
                 "volumeMounts": [
                   {
-                    "name": "http-vol",
+                    "name": "${VOLUME_NAME}",
                     "mountPath": "/home",
                     "readOnly": false
                   }
@@ -262,7 +262,7 @@
       "required": true,
       "value": "2.4-el8"
     },
-    {
+    {      "value": "httpd_vol"
       "name": "MEMORY_LIMIT",
       "displayName": "Memory Limit",
       "description": "Maximum amount of memory the container can use.",
@@ -305,7 +305,8 @@
       "name": "VOLUME_NAME",
       "description": "Volume name",
       "required": true,
-      "value": "httpd_vol"
+      "from": "pvc[a-z0-9]{10}",
+      "generate": "expression"
     },
 
     {
