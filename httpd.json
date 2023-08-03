@@ -306,7 +306,6 @@
       "required": true,
       "value": "http-vol"
     },
-
     {
       "name" : "STORAGE_CLASS",
       "description": "Storagecclass to use - here we expect storageclass name",
