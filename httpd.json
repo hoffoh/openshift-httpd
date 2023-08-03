@@ -188,9 +188,9 @@
           "spec": {
             "volumes": [
               {
-                "name": "hoffoh-pvcclaim",
+                "name": "${VOLUME_NAME}",
                 "persistentVolumeClaim": {
-                  "claimName": "hoffoh-pvcclaim"
+                  "claimName": "${PVC_NAME}"
                 }
               }
             ],            
@@ -200,7 +200,7 @@
                 "image": " ",
                 "volumeMounts": [
                   {
-                    "name": "hoffoh-pvcclaim",
+                    "name": "${VOLUME_NAME}",
                     "mountPath": "/home",
                     "readOnly": false
                   }
