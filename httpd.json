@@ -188,7 +188,7 @@
           "spec": {
             "volumes": [
               {
-                "name": "${VOLUME_NAME}",
+                "name": "http-vol",
                 "persistentVolumeClaim": {
                   "claimName": "${PVC_NAME}"
                 }
@@ -200,7 +200,7 @@
                 "image": " ",
                 "volumeMounts": [
                   {
-                    "name": "${VOLUME_NAME}",
+                    "name": "http-vol",
                     "mountPath": "/home",
                     "readOnly": false
                   }
