@@ -302,6 +302,13 @@
       "generate": "expression"
     },
     {
+      "name": "VOLUME_NAME",
+      "description": "PVC name",
+      "required": true,
+      "value": "httpd-vol"
+    },
+
+    {
       "name" : "STORAGE_CLASS",
       "description": "Storagecclass to use - here we expect storageclass name",
       "required": true,
