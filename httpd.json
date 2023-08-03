@@ -298,8 +298,7 @@
       "name": "PVC_NAME",
       "description": "PVC name",
       "required": true,
-      "from": "pvc[a-z0-9]{10}",
-      "generate": "expression"
+      "value": "pvc-httpd-exampele"
     },
     {
       "name": "VOLUME_NAME",
