@@ -67,6 +67,7 @@
         }
       }
     },
+    {
       "kind": "PersistentVolumeClaim",
       "apiVersion": "v1",
       "metadata": {
@@ -83,7 +84,8 @@
               "requests": {
                   "storage": "${STORAGE_SIZE}"
               }
-          }
+            }
+        }
       },
     {
       "kind": "BuildConfig",
