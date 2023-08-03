@@ -22,24 +22,6 @@
   },
   "objects": [
     {
-      "kind": "PersistentVolumeClaim",
-      "apiVersion": "v1",
-      "metadata": {
-          "name": "${PVC_NAME}",
-          "annotations": {
-              "volume.beta.kubernetes.io/storage-class": "${STORAGE_CLASS}"
-          }
-      },
-      "spec": {
-          "accessModes": [
-              "${ACCESS_MODES}"
-          ],
-          "resources": {
-              "requests": {
-                  "storage": "${STORAGE_SIZE}"
-              }
-          }
-      },
       "kind": "Service",
       "apiVersion": "v1",
       "metadata": {
@@ -85,6 +67,24 @@
         }
       }
     },
+      "kind": "PersistentVolumeClaim",
+      "apiVersion": "v1",
+      "metadata": {
+          "name": "${PVC_NAME}",
+          "annotations": {
+              "volume.beta.kubernetes.io/storage-class": "${STORAGE_CLASS}"
+          }
+      },
+      "spec": {
+          "accessModes": [
+              "${ACCESS_MODES}"
+          ],
+          "resources": {
+              "requests": {
+                  "storage": "${STORAGE_SIZE}"
+              }
+          }
+      },
     {
       "kind": "BuildConfig",
       "apiVersion": "build.openshift.io/v1",
@@ -298,7 +298,7 @@
       "name": "PVC_NAME",
       "description": "PVC name",
       "required": true,
-      "value": "pvc-httpd-exampele"
+      "value": "pvc-httpd-example"
     },
     {
       "name": "VOLUME_NAME",
