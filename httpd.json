@@ -303,9 +303,9 @@
     },
     {
       "name": "VOLUME_NAME",
-      "description": "PVC name",
+      "description": "Volume name",
       "required": true,
-      "value": "httpd-vol"
+      "value": "httpd_vol"
     },
 
     {
