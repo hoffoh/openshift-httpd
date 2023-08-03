@@ -304,8 +304,7 @@
       "name": "VOLUME_NAME",
       "description": "Volume name",
       "required": true,
-      "from": "pvc[a-z0-9]{10}",
-      "generate": "expression"
+      "value": "http-vol"
     },
 
     {
