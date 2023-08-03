@@ -262,7 +262,7 @@
       "required": true,
       "value": "2.4-el8"
     },
-    {      "value": "httpd_vol"
+    { 
       "name": "MEMORY_LIMIT",
       "displayName": "Memory Limit",
       "description": "Maximum amount of memory the container can use.",
