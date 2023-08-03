@@ -191,7 +191,7 @@
                 "name": "${VOLUME_NAME}",
                 "persistentVolumeClaim": {
                   "claimName": "${PVC_NAME}"
-                }      "value": "httpd_vol"
+                }
               }
             ],            
             "containers": [
