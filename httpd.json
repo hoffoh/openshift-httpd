@@ -22,25 +22,6 @@
   },
   "objects": [
     {
-      "kind": "PersistentVolumeClaim",
-      "metadata": {
-          "name": "${PVC_NAME}",
-          "annotations": {
-              "volume.beta.kubernetes.io/storage-class": "${STORAGE_CLASS}"
-          }
-      },
-      "spec": {
-          "accessModes": [
-              "${ACCESS_MODES}"
-          ],
-          "resources": {
-              "requests": {
-                  "storage": "${STORAGE_SIZE}"
-              }
-          }
-      }
-  }
-],
       "kind": "Service",
       "apiVersion": "v1",
       "metadata": {
@@ -61,6 +42,25 @@
           "name": "${NAME}"
         }
       }
+    },
+    {
+      "kind": "PersistentVolumeClaim",
+      "metadata": {
+        "name": "${PVC_NAME}",
+        "annotations": {
+          "volume.beta.kubernetes.io/storage-class": "${STORAGE_CLASS}"
+          }
+      },
+      "spec": {
+        "accessModes": [
+           "${ACCESS_MODES}"
+          ],
+        "resources": {
+           "requests": {
+              "storage": "${STORAGE_SIZE}"
+            }
+         }
+      }  
     },
     {
       "kind": "Route",
@@ -189,9 +189,9 @@
           "spec": {
             "volumes": [
               {
-                "name": "hoffoh-pvcclaim",
+                "name": "${VOLUME_NAME}",
                 "persistentVolumeClaim": {
-                  "claimName": "hoffoh-pvcclaim"
+                  "claimName": "${PVC_NAME}"
                 }
               }
             ],            
@@ -201,7 +201,7 @@
                 "image": " ",
                 "volumeMounts": [
                   {
-                    "name": "hoffoh-pvcclaim",
+                    "name": "${VOLUME_NAME}",
                     "mountPath": "/home",
                     "readOnly": false
                   }
@@ -264,6 +264,36 @@
       "value": "2.4-el8"
     },
     {
+      "name": "VOLUME_NAME",
+      "description": "Volume name",
+      "required": true,
+      "value": "httpd-vol"
+    },
+    {
+      "name": "PVC_NAME",
+      "description": "PVC name",
+      "required": true,
+      "value": "httpd-claim"
+    },        
+    {
+      "name" : "STORAGE_CLASS",
+      "description": "Storagecclass to use - here we expect storageclass name",
+      "required": true,
+      "value": "gp2-csi"
+    },
+    {
+      "name": "STORAGE_SIZE",
+      "description": "The PVC size - default is 1Gi",
+      "required": true,
+      "value": "1Gi"
+    },
+    {
+      "name": "ACCESS_MODES",
+      "description": "PVC access mode - this will have different values for different storage backends",
+      "required": true,
+      "value": "ReadWriteOnce"
+    },
+    {
       "name": "MEMORY_LIMIT",
       "displayName": "Memory Limit",
       "description": "Maximum amount of memory the container can use.",
@@ -294,31 +324,6 @@
       "displayName": "Application Hostname",
       "description": "The exposed hostname that will route to the httpd service, if left blank a value will be defaulted.",
       "value": ""
-    },
-    {
-      "name": "PVC_NAME",
-      "description": "PVC name",
-      "required": true,
-      "from": "pvc[a-z0-9]{10}",
-      "generate": "expression"
-    },
-    {
-      "name" : "STORAGE_CLASS",
-      "description": "Storagecclass to use - here we expect storageclass name",
-      "required": true,
-      "value": "storageclassname"
-    },
-    {
-      "name": "STORAGE_SIZE",
-      "description": "The PVC size - default is 1Gi",
-      "required": true,
-      "value": "1Gi"
-    },
-    {
-      "name": "ACCESS_MODES",
-      "description": "PVC access mode - this will have different values for different storage backends",
-      "required": true,
-      "value": "ReadWriteOnce"
     },
     {
       "name": "GITHUB_WEBHOOK_SECRET",
