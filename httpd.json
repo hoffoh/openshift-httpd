@@ -39,9 +39,7 @@
                   "storage": "${STORAGE_SIZE}"
               }
           }
-      }
-  }
-],
+      },
       "kind": "Service",
       "apiVersion": "v1",
       "metadata": {
@@ -60,9 +58,9 @@
         ],
         "selector": {
           "name": "${NAME}"
-        }
-      }
-    },
+                    }
+              }
+     },
     {
       "kind": "Route",
       "apiVersion": "route.openshift.io/v1",
