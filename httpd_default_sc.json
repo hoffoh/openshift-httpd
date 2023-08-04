@@ -25,10 +25,7 @@
       "kind": "PersistentVolumeClaim",
       "apiVersion": "v1",
       "metadata": {
-          "name": "${PVC_NAME}",
-          "annotations": {
-              "volume.beta.kubernetes.io/storage-class": "${STORAGE_CLASS}"
-          }
+          "name": "${PVC_NAME}"
       },
       "spec": {
           "accessModes": [
@@ -224,7 +221,7 @@
                     "timeoutSeconds": 3,
                     "initialDelaySeconds": 30,
                     "httpGet": {
-                        "path": "/",
+                        "path": "/",STORAGE_
                         "port": 8080
                     }
                 },
@@ -307,12 +304,6 @@
       "description": "Volume name",
       "required": true,
       "value": "http-vol"
-    },
-    {
-      "name" : "STORAGE_CLASS",
-      "description": "Storagecclass to use - here we expect storageclass name",
-      "required": true,
-      "value": "gp2-csi"
     },
     {
       "name": "STORAGE_SIZE",
