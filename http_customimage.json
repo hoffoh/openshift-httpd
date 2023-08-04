@@ -109,7 +109,7 @@
             "from": {
               "kind": "ImageStreamTag",
               "namespace": "${NAMESPACE}",
-              "name": "quay.io/rhn_support_rafrojas/apache_example"
+              "name": "quay.io/rhn_support_rafrojas/apache_example:latest"
             }
           }
         },
