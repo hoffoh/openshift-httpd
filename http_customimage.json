@@ -109,7 +109,7 @@
             "from": {
               "kind": "ImageStreamTag",
               "namespace": "${NAMESPACE}",
-              "name": "rhn_support_rafrojas/apache_example:latest"
+              "name": "apache_example:latest"
             }
           }
         },
