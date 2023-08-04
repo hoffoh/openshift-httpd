@@ -312,7 +312,7 @@
       "name" : "STORAGE_CLASS",
       "description": "Storagecclass to use - here we expect storageclass name",
       "required": true,
-      "value": ""
+      "value": "default"
     },
     {
       "name": "STORAGE_SIZE",
