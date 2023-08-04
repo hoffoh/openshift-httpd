@@ -312,7 +312,7 @@
       "name" : "STORAGE_CLASS",
       "description": "Storagecclass to use - here we expect storageclass name",
       "required": true,
-      "value": "gp2-csi"
+      "value": ""
     },
     {
       "name": "STORAGE_SIZE",
