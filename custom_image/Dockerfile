@@ -4,5 +4,4 @@ LABEL description="This is a custom httpd container image"
 MAINTAINER HoffoH hoffoh@home.is
 RUN yum install -y httpd
 USER 1001
-ENTRYPOINT ["/usr/sbin/httpd"]
-CMD ["-D", "FOREGROUND"]
+CMD bash -c "sleep 50000"
