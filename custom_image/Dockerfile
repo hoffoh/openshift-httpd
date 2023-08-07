@@ -1,5 +1,5 @@
 # This is a comment line
-FROM ubi8/s2i-core:rhel8.8
+FROM registry.redhat.io/rhel8/httpd-24:1-268.1689584944 
 
 # Apache HTTP Server image.
 #
