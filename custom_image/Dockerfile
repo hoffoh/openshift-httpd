@@ -4,7 +4,6 @@ LABEL description="This is a custom httpd container image"
 MAINTAINER HoffoH hoffoh@home.is
 RUN yum install -y httpd
 ENV PORT 8080
-RUN sed -ri -e "/^Listen 80/c\Listen ${PORT}" /etc/httpd/conf/httpd.conf && \
 EXPOSE ${PORT}
 ENV LogLevel "info"
 ADD  https://github.com/hoffoh/openshift-httpd/blob/main/images/wp.jpg?raw=true /var/www/html/
