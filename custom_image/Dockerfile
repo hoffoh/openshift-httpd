@@ -7,6 +7,7 @@ USER 0
 ADD https://raw.githubusercontent.com/hoffoh/openshift-httpd/main/index/index.html /tmp/src/index.html
 ADD  https://github.com/hoffoh/openshift-httpd/blob/main/images/wp.jpg?raw=true /var/www/html/
 RUN chown -R 1001:0 /tmp/src
+RUN chown -R 1001:0 /var/www/html/wp.jpg
 USER 1001
 
 # Let the assemble script install the dependencies
