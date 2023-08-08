@@ -5,6 +5,7 @@ FROM registry.redhat.io/rhel8/httpd-24
 # and set permissions so that the container runs without the root access
 USER 0
 ADD https://raw.githubusercontent.com/hoffoh/openshift-httpd/main/index/index.html /tmp/src/index.html
+ADD  https://github.com/hoffoh/openshift-httpd/blob/main/images/wp.jpg?raw=true /var/www/html/
 RUN chown -R 1001:0 /tmp/src
 USER 1001
 
