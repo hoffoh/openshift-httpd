@@ -4,7 +4,7 @@ FROM registry.redhat.io/rhel8/httpd-24
 # Add application sources to a directory where the assemble script expects them
 # and set permissions so that the container runs without the root access
 USER 0
-ADD https://raw.githubusercontent.com/hoffoh/openshift-httpd/main/index/index.html /tmp/src/index.html
+ADD https://raw.githubusercontent.com/hoffoh/openshift-httpd/main/index_git_image/index.html /tmp/src/index.html
 ADD  https://github.com/hoffoh/openshift-httpd/blob/main/images/wp.jpg?raw=true /tmp/src
 RUN chown -R 1001:0 /tmp/src
 RUN chmod 666 /tmp/src/wp.jpg
