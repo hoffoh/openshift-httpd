@@ -1,26 +1,32 @@
-Apache static web server for openshift
-
+Openshift templates with apache web server
 
 [CONTENT]
+------------------------------
 
-├── custom_image_dockerfile
-│  └── Dockerfile
-├── custom_template_pvc
-│  ├── httpd_default_sc.json
-│  ├── httpd_gp2csi_sc.json
-│  ├── httpd_gp3csi_sc.json
-│  └── httpd_nooba_sc.json
-├── images
-│  └── wp.jpg
-├── index_git_image
-│  └── index.html
-├── index_localfiles
-│  └── index.html
-└── README.md
+/custom_image_dockerfile
+   Dockerfile
+
+/custom_template_pvc
+  httpd_default_sc.json
+  httpd_gp2csi_sc.json
+  httpd_gp3csi_sc.json
+  httpd_nooba_sc.json
+
+/images
+  wp.jpg
+
+/index_git_image
+  index.html
+
+/index_localfiles
+  index.html
+
+README.md
 
 
 [DETAILS]
 
+------------------------------
 * custom_image_dockerfile
   - Custom image that copy to container index.html and wp.jpg from git, need to manual expose svc to get route
 
