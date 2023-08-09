@@ -4,22 +4,22 @@ Openshift templates with apache web server
 ------------------------------
 
 /custom_image_dockerfile
-   Dockerfile
+  - Dockerfile
 
 /custom_template_pvc
-  httpd_default_sc.json
-  httpd_gp2csi_sc.json
-  httpd_gp3csi_sc.json
-  httpd_nooba_sc.json
+  - httpd_default_sc.json
+  - httpd_gp2csi_sc.json
+  - httpd_gp3csi_sc.json
+  - httpd_nooba_sc.json
 
 /images
-  wp.jpg
+  - wp.jpg
 
 /index_git_image
-  index.html
+  - index.html
 
 /index_localfiles
-  index.html
+  - index.html
 
 README.md
 
