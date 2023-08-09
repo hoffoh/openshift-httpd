@@ -5,5 +5,6 @@ USER 0
 ADD https://raw.githubusercontent.com/hoffoh/openshift-httpd/main/index/index.html /var/www/html/index.html
 ADD  https://github.com/hoffoh/openshift-httpd/blob/main/images/wp.jpg?raw=true /var/www/html/wp.jpg
 RUN chown -R root:apache /var/www
+RUN chmod 644 /var/www/html/index.html && chmod 644 /var/www/html/wp.jpg 
 RUN chmod u+rwx,g+rx,o+rx /var/www
 CMD run-httpd
