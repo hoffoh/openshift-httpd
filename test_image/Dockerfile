@@ -2,7 +2,7 @@ FROM registry.redhat.io/rhel8/httpd-24
 USER 0
 # Add application sources
 # The run script uses standard ways to run the application
-RUN chown -R root:www-data /var/www
+RUN chown -R root:apache /var/www
 RUN chmod u+rwx,g+rx,o+rx /var/www
 ADD https://raw.githubusercontent.com/hoffoh/openshift-httpd/main/index/index.html /usr/share/testpage/index.html
 RUN chmod 644 /usr/share/testpage/index.html
