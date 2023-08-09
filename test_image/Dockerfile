@@ -4,8 +4,8 @@ USER 0
 # The run script uses standard ways to run the application
 RUN chown -R root:apache /var/www
 RUN chmod u+rwx,g+rx,o+rx /var/www
-ADD https://raw.githubusercontent.com/hoffoh/openshift-httpd/main/index/index.html /usr/share/testpage/index.html
+ADD https://raw.githubusercontent.com/hoffoh/openshift-httpd/main/index/index.html /var/www/html/index.html
 RUN chmod 644 /usr/share/testpage/index.html
-ADD  https://github.com/hoffoh/openshift-httpd/blob/main/images/wp.jpg?raw=true /usr/share/testpage/wp.jpg
+ADD  https://github.com/hoffoh/openshift-httpd/blob/main/images/wp.jpg?raw=true /var/www/html/wp.jpg
 RUN chmod 644 /usr/share/testpage/wp.jpg                                                                                                                                                                                
 CMD run-httpd
