@@ -25,7 +25,6 @@ README.md
 
 
 [DETAILS]
-
 ------------------------------
 * custom_image_dockerfile
   - Custom image that copy to container index.html and wp.jpg from git, need to manual expose svc to get route
