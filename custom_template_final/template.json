@@ -196,7 +196,7 @@
                 "volumeMounts": [
                   {
                     "name": "${VOLUME_NAME}",
-                    "mountPath": "/home",Version=2.4-el8
+                    "mountPath": "/home",
                     "readOnly": false
                   }
                 ],
