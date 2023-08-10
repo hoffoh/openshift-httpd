@@ -106,7 +106,7 @@
         "strategy": {
           "type": "Docker",
           "dockerStrategy": {
-            "dockerfilePath": "https://raw.githubusercontent.com/hoffoh/openshift-httpd/main/custom_image_dockerfile/Dockerfile"
+            "dockerfilePath": "Dockerfile"
             }
           }
         },
@@ -196,7 +196,7 @@
                 "volumeMounts": [
                   {
                     "name": "${VOLUME_NAME}",
-                    "mountPath": "/home",
+                    "mountPath": "/home",Version=2.4-el8
                     "readOnly": false
                   }
                 ],
@@ -281,7 +281,7 @@
       "displayName": "Context Directory",
       "description": "Set this to the relative path to your project if it is not in the root of your repository.",
       "required" : true,
-      "value": "index_git_image"
+      "value": "custom_template_final"
     },
     {
       "name": "APPLICATION_DOMAIN",
