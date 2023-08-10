@@ -107,7 +107,6 @@
           "type": "Docker",
           "dockerStrategy": {
             "dockerfilePath": "https://raw.githubusercontent.com/hoffoh/openshift-httpd/main/custom_image_dockerfile/Dockerfile"
-            
           }
         },
         "output": {
