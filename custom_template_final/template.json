@@ -98,10 +98,10 @@
         "source": {
           "type": "Git",
           "git": {
-            "uri": "${SOURCE_REPOSITORY_URL}",
-            "ref": "${SOURCE_REPOSITORY_REF}"
+            "uri": "https://raw.githubusercontent.com/hoffoh/openshift-httpd/",
+            "ref": "main"
           },
-          "contextDir": "${CONTEXT_DIR}"
+          "contextDir": "custom_image_dockerfile"
         },
         "strategy": {
           "type": "Docker",
