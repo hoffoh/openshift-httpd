@@ -98,7 +98,7 @@
         "source": {
           "type": "Git",
           "git": {
-            "uri": "https://raw.githubusercontent.com/hoffoh/openshift-httpd/",
+            "uri": "https://raw.githubusercontent.com/hoffoh/openshift-httpd/custom_image_dockerfile/Dockerfile",
             "ref": "main"
           },
           "contextDir": "custom_image_dockerfile"
