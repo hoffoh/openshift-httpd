@@ -280,7 +280,7 @@
       "displayName": "Context Directory",
       "description": "Set this to the relative path to your project if it is not in the root of your repository.",
       "required" : true,
-      "value": "custom_template_final"
+      "value": "index_git_image"
     },
     {
       "name": "APPLICATION_DOMAIN",
