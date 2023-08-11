@@ -191,7 +191,7 @@
             "containers": [
               {
                 "name": "httpd-example",
-                "image": "imagestream.image.openshift.io/httpd-example",
+                "image": " ",
                 "volumeMounts": [
                   {
                     "name": "${VOLUME_NAME}",
