@@ -98,8 +98,7 @@
         "source": {
           "type": "Git",
           "git": {
-            "uri": "${SOURCE_REPOSITORY_URL}",
-            "ref": "${SOURCE_REPOSITORY_BRANCH}"
+            "uri": "${SOURCE_REPOSITORY_URL}"
           },
           "contextDir": "custom_image_dockerfile"
         },
