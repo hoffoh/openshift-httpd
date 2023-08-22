@@ -300,7 +300,7 @@
       "name": "PVC_NAME",
       "description": "PVC name",
       "required": true,
-      "value": "pvc-httpd-example"
+      "value": "pvc-httpd-example-cephfs"
     },
     {
       "name": "VOLUME_NAME",
