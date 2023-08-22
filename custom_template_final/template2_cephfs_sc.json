@@ -312,6 +312,12 @@
       "value": "1Gi"
     },
     {
+      "name" : "STORAGE_CLASS",
+      "description": "Storagecclass to use - here we expect storageclass name",
+      "required": true,
+      "value": "ocs-storagecluster-cephfs"
+    },
+    {
       "name": "ACCESS_MODES",
       "description": "PVC access mode - this will have different values for different storage backends",
       "required": true,
