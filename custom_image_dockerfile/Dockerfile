@@ -1,6 +1,7 @@
 FROM registry.redhat.io/rhel8/httpd-24
 USER 0
 # Add application sources
+# Test to trigger bc 
 # The run script uses standard ways to run the application
 ADD https://raw.githubusercontent.com/hoffoh/openshift-httpd/main/index_localfiles/index.html /var/www/html/index.html
 ADD  https://github.com/hoffoh/openshift-httpd/blob/main/images/wp.jpg?raw=true /var/www/html/wp.jpg
