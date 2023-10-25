@@ -17,4 +17,12 @@ spec:
         - command: ["sleep", "220"]
           name: ubi8-image 
           image: ubi8 
+          volumeMounts:
+            - mountPath: /home
+              name: existent-pvc 
       restartPolicy: OnFailure
+      volumes:
+        - name: existent-pvc
+          persistentVolumeClaim:
+            claimName: pvc-httpd-example 
+
