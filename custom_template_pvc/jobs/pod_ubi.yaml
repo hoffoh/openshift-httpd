@@ -8,7 +8,7 @@ spec:
   containers:
     - command: ["/bin/sh", "-c"]
       args: 
-      - yum install git -y && cd home ;  git clone https://github.com/hoffoh/openshift-httpd . && sleep "300"
+      - yum install git -y && git clone https://github.com/hoffoh/openshift-httpd home/ && sleep 300 
       volumeMounts:
         - mountPath: /home
           name: existent-pvc 
