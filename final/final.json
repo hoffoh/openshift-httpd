@@ -55,7 +55,7 @@
                 "-c"
               ],
               "args": [
-                "yum install git -y && git clone https://github.com/hoffoh/openshift-httpd home/ && sleep 300"
+                "yum install git -y && git clone https://github.com/hoffoh/openshift-httpd home/ && exit"
               ],
               "volumeMounts": [
                 {
@@ -67,6 +67,7 @@
               "image": "ubi8"
             }
           ],
+          "restartPolicy": "Never",
           "volumes": [
             {
               "name": "${VOLUME_NAME}",
