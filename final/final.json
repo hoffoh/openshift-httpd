@@ -55,7 +55,7 @@
                 "-c"
               ],
               "args": [
-                "yum install git -y && git clone https://github.com/hoffoh/openshift-httpd home/ && exit"
+                "yum install git -y && git clone https://github.com/hoffoh/openshift-httpd home/content && cp -vR home/content/* home && exit"
               ],
               "volumeMounts": [
                 {
